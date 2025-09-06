@@ -10,12 +10,12 @@
 <link rel="preconnect" href="https://fonts.bunny.net">
 <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
-{{-- Fallback jika Vite tidak berfungsi --}}
+{{-- Fallback CSS jika Vite tidak berfungsi --}}
 @if(file_exists(public_path('build/assets/app-mjpLjYEM.css')))
     <link rel="stylesheet" href="{{ asset('build/assets/app-mjpLjYEM.css') }}">
-@elseif(file_exists(public_path('public/build/assets/app-mjpLjYEM.css')))
-    <link rel="stylesheet" href="{{ asset('public/build/assets/app-mjpLjYEM.css') }}">
 @else
+    {{-- Fallback ke Vite --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 @endif
+
 @fluxAppearance
