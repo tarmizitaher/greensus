@@ -10,6 +10,8 @@
                     <span class="flex h-9 w-9 items-center justify-center rounded-md">
                         <x-app-logo-icon class="size-9 fill-current text-black dark:text-white" />
                     </span>
+                    <span class="truncate leading-tight font-semibold">Green and Sustainable</span>
+                    <span class="truncate leading-tight font-semibold">Materials Society</span>
 
                     <span class="sr-only">{{ config('app.name', 'Laravel') }}</span>
                 </a>
